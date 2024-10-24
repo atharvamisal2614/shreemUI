@@ -8,7 +8,7 @@ export default function Header() {
 
         <div className="relative group">
  
-          <h2 className="absolute font-serif top-4 left-1/2 transform -translate-x-1/2 text-white text-2xl  font-bold">
+          <h2 className="absolute font-serif top-4 left-1/2 transform -translate-x-1/2 text-white text-lg md:text-2xl  font-bold">
            Counselling Office
           </h2>
           <Link href="/counseling">
@@ -43,7 +43,7 @@ export default function Header() {
      
         <div className="relative group">
         
-          <h2 className="absolute font-serif top-4 left-1/2 transform -translate-x-1/2 text-white text-2xl font-bold">
+          <h2 className="absolute font-serif top-4 left-1/2 transform -translate-x-1/2 text-white text-lg md:text-2xl font-bold">
           Shreem Classroom
           </h2>
           <Link href="/shreemclasses">
@@ -78,8 +78,9 @@ export default function Header() {
 
   
       <div className="mt-4 relative group">
+      
      
-        <h2 className="absolute font-serif top-4 left-1/2 transform -translate-x-1/2 text-white text-2xl font-bold">
+        <h2 className="absolute font-serif top-4 left-1/2 transform -translate-x-1/2 text-white text-lg md:text-2xl font-bold">
         RIA Yoga Studio
         </h2>
         <Link href="/riayoga">

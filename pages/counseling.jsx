@@ -65,7 +65,7 @@ function Counseling() {
           />
         </div>
         <div className="p-5 md:w-1/2">
-          <h1 className="text-4xl text-[#212121] font-libreBaskerVille">A Few Words About Us</h1>
+          <h1 className="md:text-4xl text-3xl text-[#212121] font-libreBaskerVille">A Few Words About Us</h1>
           <br />
           <p className=" leading-8 tracking-wider font-libreBaskerVille text-gray-800 text-lg ">
             <strong>we are the best counselors over the Maharashtra</strong>
@@ -163,7 +163,7 @@ function Counseling() {
             </div>
             <div className="p-5 md:w-1/2">
               <h3 className="md:text-4xl text-2xl leading-snug font-libreBaskerVille font-bold pb-4">Counselling</h3>
-              <p className="leading-8 tracking-wide font-libreBaskerVille text-gray-950 text-lg mb-4 text-justify">
+              <p className="leading-8 tracking-wide font-libreBaskerVille text-gray-950 md:text-lg text-[16px] mb-4 text-justify">
                 Our counsellors and psychologists work with individuals, children, adolescents, couples, and
                 families to address a variety of mental health issues that may interfere with satisfying
                 interpersonal relationships in the home and the workplace.
@@ -184,7 +184,7 @@ function Counseling() {
             </div>
             <div className="p-5 md:w-1/2">
               <h3 className="md:text-4xl text-2xl leading-snug font-libreBaskerVille font-bold pb-4">Counselling Supervision</h3>
-              <p className="leading-8 tracking-wide font-libreBaskerVille text-gray-950 text-lg mb-4 text-justify">
+              <p className="leading-8 tracking-wide font-libreBaskerVille text-gray-950 md:text-lg text-[16px]  mb-4 text-justify">
                 Counselors, psychotherapists, and psychologists are encouraged to have ongoing supervision as long
                 as they are practicing in the field of mental health.
               </p>
@@ -205,7 +205,7 @@ function Counseling() {
             </div>
             <div className="p-5 md:w-1/2">
               <h3 className="md:text-4xl text-2xl  leading-snug font-libreBaskerVille font-bold pb-4">School & Educational Institutions</h3>
-              <p className="leading-8 tracking-wide text-lg font-libreBaskerVille text-gray-950  mb-4 text-justify">
+              <p className="leading-8 tracking-wide md:text-lg text-[16px]  font-libreBaskerVille text-gray-950  mb-4 text-justify">
                 Our team collaborates closely with schools and educational institutions,
                 offering comprehensive support to students,
                 parents, faculty, and staff. We focus on fostering a positive
@@ -231,7 +231,7 @@ function Counseling() {
             </div>
             <div className="p-5 md:w-1/2">
               <h3 className="md:text-4xl text-2xl leading-snug font-libreBaskerVille font-bold pb-4">Online / Virtual Counselling</h3>
-              <p className="leading-8 tracking-wide font-libreBaskerVille text-gray-950 text-lg mb-4 text-justify">
+              <p className="leading-8 tracking-wide font-libreBaskerVille text-gray-950 md:text-lg text-[16px]  mb-4 text-justify">
                 Online counselling, the digital-age version of counselling services is a more accessible, convenient and discrete method of receiving therapy. In order to attend online counselling sessions,
                 clients and the therapist need access to fast internet connections and webcams.
               </p>
@@ -252,7 +252,7 @@ function Counseling() {
             </div>
             <div className="p-5 md:w-1/2">
               <h3 className="md:text-4xl text-2xl leading-snug font-libreBaskerVille font-bold pb-4">Psychological Testing and Analysis</h3>
-              <p className="leading-8 tracking-wide font-libreBaskerVille text-gray-950 text-lg mb-4 text-justify">
+              <p className="leading-8 tracking-wide font-libreBaskerVille text-gray-950 md:text-lg text-[16px]  mb-4 text-justify">
                 We do various types of Psychometric testing for an individuals,
                 families, school students, teachers, industrial workers and supervisors.
                 Separate counselling is also provided to all sectors in educational and industrial field.
@@ -274,7 +274,7 @@ function Counseling() {
             </div>
             <div className="p-5 md:w-1/2">
               <h3 className="md:text-4xl text-2xl leading-snug font-libreBaskerVille font-bold pb-4">Workshops & Employee Assistance Program</h3>
-              <p className="leading-8 tracking-wide font-libreBaskerVille text-gray-950 text-lg mb-4 text-justify">
+              <p className="leading-8 tracking-wide font-libreBaskerVille text-gray-950 md:text-lg text-[16px] mb-4 text-justify">
                 Come join us for one of our talks, workshops and be life long learners with us.
                 Our team have been affiliated with multi-national corporations in Singapore and in the region.
               </p>
