@@ -18,7 +18,7 @@ function Navbar() {
   const closeMenu = () => setIsOpen(false);
 
   const getLinkClasses = (path) =>
-    `text-xl font-semibold px-3 py-2 rounded-full transition duration-300 ease-in-out ${
+    `text-lg font-semibold px-3 py-2 rounded-full transition duration-300 ease-in-out ${
       activeLink === path
         ? 'bg-red-500 text-white' 
         : 'text-red-600 hover:bg-red-500 hover:text-white'
