@@ -1,6 +1,7 @@
 import dbConnect from "@/middleware/mongoose";
 import Admin from "@/models/Admin";
 import CryptoJS from "crypto-js";
+import jwt from "jsonwebtoken";
 async function handler(req, res) {
     if (req.method !== 'POST') {
         return res.status(405).json({ message: 'Method not allowed' });
@@ -18,7 +19,8 @@ async function handler(req, res) {
         if (admin.password !== hashedPassword) {
             return res.status(401).json({ success:false, message: "Invalid Email Id or Password" })
         }
-        return res.status(200).json({success:true, message: "Admin found, Login Successful"})
+        const token = jwt.sign({email : admin.email},"jwtsecret",{expiresIn:"2d"})
+        return res.status(200).json({success:true, message: "Admin found, Login Successful",token})
     }
     catch (error) {
         return res.status(500).json({message: "Something went wrong"})

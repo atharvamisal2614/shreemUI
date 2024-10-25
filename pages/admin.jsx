@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import Image from 'next/image';
 import { useRouter } from 'next/router';
 import { BASE_URL } from '@/utils/config';
@@ -7,6 +7,15 @@ import 'react-toastify/dist/ReactToastify.css';
 import { AiFillEye, AiFillEyeInvisible } from "react-icons/ai";
 
 export default function AdminLogin() {
+
+
+  useEffect(()=>{
+    if(localStorage.getItem("token")){
+      router.push(`${BASE_URL}/admin/blogform`)
+    } 
+  },[])
+
+
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [showPassword, setShowPassword] = useState(false)
@@ -27,9 +36,13 @@ export default function AdminLogin() {
     let response = await res.json()
     console.log("response", response)
     console.log('Email:', email, 'Password:', password);
+   
     setEmail("");
     setPassword("")
     if (response.success) {
+
+      localStorage.setItem("token",response.token)
+      
       toast.success('Welcome! Login Successful', {
         position: "top-left",
         autoClose: 3000,
@@ -41,7 +54,7 @@ export default function AdminLogin() {
         theme: "light",
       });
       setTimeout(() => {
-        router.push('/blogform')
+        router.push(`${BASE_URL}/admin/blogform`)
       }, 2000)
     } if (!response.success) {
       toast.error('Invalid Credentials', {
