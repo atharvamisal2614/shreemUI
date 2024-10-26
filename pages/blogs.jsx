@@ -143,6 +143,7 @@ import { FaArrowRight, FaShareAlt } from 'react-icons/fa';
 import dbConnect from '@/middleware/mongoose';
 import Blog from '@/models/Blog';
 import { BASE_URL } from '@/utils/config';
+import mongoose from 'mongoose';
 
 const Blogs = ({ blogs }) => {
 
@@ -184,7 +185,7 @@ const Blogs = ({ blogs }) => {
                             <h2 className="text-2xl font-libreBaskerVille font-bold text-gray-900 mb-4">{blog.title}</h2>
 
                             {/* Image */}
-                            {/* <div className="w-full h-72 relative"> 
+                            <div className="w-full h-72 relative"> 
                                 <Image
                                     src={blog.thumbnail}
                                     alt="image"
@@ -193,7 +194,7 @@ const Blogs = ({ blogs }) => {
                                     className="rounded-lg"
                                     loading='lazy'
                                 />
-                            </div> */}
+                            </div>
 
                             {/* Read More and Share Button */}
                             <div className="mt-4 flex justify-between">
@@ -221,14 +222,14 @@ const Blogs = ({ blogs }) => {
 };
 
 export async function getServerSideProps(context) {
-    // if(!mongoose.connections[0].readyState){
-    //     console.log("Connecting to mongoDB by blog.jsx")
-    // }
-    // if(mongoose.connections[0].readyState){
-    //     console.log("MongoDB Connected successfully by blogs.jsx")
-    // }
+    if(!mongoose.connections[0].readyState){
+        console.log("Connecting to mongoDB by blog.jsx")
+    }
+    if(mongoose.connections[0].readyState){
+        console.log("MongoDB Connected successfully by blogs.jsx")
+    }
 
-    await dbConnect()
+    // await dbConnect()
     const blogs = await Blog.find({}).lean().maxTimeMS(60000);
     return {
         props: {
