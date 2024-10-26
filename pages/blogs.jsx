@@ -229,7 +229,7 @@ export async function getServerSideProps(context) {
     // }
 
     await dbConnect()
-    const blogs = await Blog.find({});
+    const blogs = await Blog.find({}).lean().maxTimeMS(60000);
     return {
         props: {
             blogs: JSON.parse(JSON.stringify(blogs))
