@@ -25,6 +25,17 @@ export default function AdminLogin() {
   const togglePassword = () => { setShowPassword(!showPassword) }
   const handleSubmit = async (e) => {
     e.preventDefault();
+
+    const loadingToastId = toast.loading('Logging you in...', {
+      position: "top-left",
+      hideProgressBar: true,
+      closeOnClick: false,
+      pauseOnHover: false,
+      draggable: false,
+      progress: undefined,
+      theme: "light",
+  });
+
     const data = { email, password }
     let res = await fetch(`${BASE_URL}/api/login`, {
       method: 'POST',
@@ -39,25 +50,33 @@ export default function AdminLogin() {
    
     setEmail("");
     setPassword("")
+
+
+
+
     if (response.success) {
 
       localStorage.setItem("token",response.token)
       
-      toast.success('Welcome! Login Successful', {
-        position: "top-left",
+      toast.update(loadingToastId, {
+        render: 'Welcome! Login Successful',
+        type: 'success',
         autoClose: 3000,
-        hideProgressBar: false,
+        isLoading: false,
         closeOnClick: true,
         pauseOnHover: true,
         draggable: true,
         progress: undefined,
         theme: "light",
-      });
+    });
+
       setTimeout(() => {
         router.push(`${BASE_URL}/admin/blogform`)
-      }, 2000)
+      }, 1000)
     } if (!response.success) {
-      toast.error('Invalid Credentials', {
+      toast.update(loadingToastId, {
+        render: "Invalid Credentials",
+        type: 'error',
         position: "top-left",
         autoClose: 3000,
         hideProgressBar: false,
