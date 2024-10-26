@@ -184,7 +184,7 @@ const Blogs = ({ blogs }) => {
                             <h2 className="text-2xl font-libreBaskerVille font-bold text-gray-900 mb-4">{blog.title}</h2>
 
                             {/* Image */}
-                            <div className="w-full h-72 relative"> {/* Wrapping the image */}
+                            {/* <div className="w-full h-72 relative"> 
                                 <Image
                                     src={blog.thumbnail}
                                     alt="image"
@@ -193,7 +193,7 @@ const Blogs = ({ blogs }) => {
                                     className="rounded-lg"
                                     loading='lazy'
                                 />
-                            </div>
+                            </div> */}
 
                             {/* Read More and Share Button */}
                             <div className="mt-4 flex justify-between">
