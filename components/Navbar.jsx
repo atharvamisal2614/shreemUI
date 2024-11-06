@@ -61,9 +61,9 @@ function Navbar() {
             <Link href="/shreemclasses" className= {getLinkClasses('/shreemclasses')}>
               Shreem Classes
             </Link>
-            <Link href="/riayoga" className={getLinkClasses('/riayoga')}>
+            {/* <Link href="/riayoga" className={getLinkClasses('/riayoga')}>
               RIA Yoga Studio
-            </Link>
+            </Link> */}
             <Link href="/counseling" className={getLinkClasses('/counseling')}>
               Learning Hub counseling
             </Link>
@@ -132,9 +132,9 @@ function Navbar() {
           <Link href="/shreemclasses" onClick={closeMenu} className={getLinkClasses('/shreemclasses')}>
             Shreem Classes
           </Link>
-          <Link href="/riayoga" onClick={closeMenu} className={getLinkClasses('/riayoga')}>
+          {/* <Link href="/riayoga" onClick={closeMenu} className={getLinkClasses('/riayoga')}>
             RIA Yoga Studio
-          </Link>
+          </Link> */}
           <Link href="/counseling" onClick={closeMenu} className={getLinkClasses('/counseling')}>
             Learning Hub counselling
           </Link>

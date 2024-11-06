@@ -1,10 +1,11 @@
+import Link from "next/link";
 function Founder() {
     return (
       <section className="text-gray-600 body-font bg-yellow-400">
         <div className="container px-5 py-20 mx-auto">
           {/* Section Heading */}
           <div className="flex flex-col text-center w-full mb-12">
-            <h1 className="text-5xl font-sans font-medium title-font mb-4 text-red-500">Founders</h1>
+            <h1 className="text-5xl  font-medium title-font mb-4 text-red-500 font-libreBaskerVille">Founders</h1>
           </div>
   
           {/* Founders Cards */}
@@ -15,13 +16,27 @@ function Founder() {
                 <img
                   alt="founder"
                   className="w-40 h-40 mb-4 rounded-full object-cover object-center"
-                  src="https://dummyimage.com/200x200"
+                  src="/images/shreem-founder-1.jpg"
                 />
-                <h2 className="title-font font-medium text-xl text-gray-900">Name</h2>
-                <p className="mb-4 text-gray-700">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi corporis molestias harum? Exercitationem obcaecati, eos minima ipsam illum, ad vel aspernatur modi cupiditate facilis rem at corrupti veniam reiciendis aliquam?
+                <h2 className="title-font font-medium text-xl text-gray-900 mb-4">Dr. Yashashri Patil</h2>
+                <h3 className="title-font font-medium italic text-lg text-gray-500 mb-4">Holistic Wellness Expert & Spiritual Guide</h3>
+                <p className="mb-4 text-gray-700 text-justify">
+                Dr. Yashashri Patil is a multifaceted individual who seamlessly
+                 blends the realms of spirituality, astrology, and wellness to
+                  empower individuals on their journey towards self-discovery
+                   and enlightenment. As a Life Coach, Yoga Instructor, 
+                   and renowned Astrologer, Dr. Yashashri offers a unique 
+                   and comprehensive approach to personal growth and transformation.
                 </p>
-                <p className="text-gray-500 font-semibold">Founder & CEO</p>
+                <p className="text-gray-500 font-semibold mb-4">Founder & CEO</p>
+                <Link href={'/founderyashashri'}>
+                <button 
+                // className="text-red-500 mx-auto"
+                className=" bg-red-500 text-white rounded-full px-4 py-2 transition duration-300 ease-in-out  font-semibold"
+                >
+                Read More</button>
+              
+                </Link>
               </div>
             </div>
   
@@ -31,13 +46,27 @@ function Founder() {
                 <img
                   alt="founder"
                   className="w-40 h-40 mb-4 rounded-full object-cover object-center"
-                  src="https://dummyimage.com/200x200"
+                   src="/images/founder-shreekant.jpg"
                 />
-                <h2 className="title-font font-medium text-xl text-gray-900">Name</h2>
-                <p className="mb-4 text-gray-700">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur maiores optio consectetur repellendus voluptate rem sit necessitatibus? Rerum libero aspernatur, culpa reiciendis cupiditate fugiat iure aliquam ut, eum non ipsa?
+                <h2 className="title-font font-medium text-xl text-gray-900 mb-4">Dr. Shrikant kulange </h2>
+                <h3 className="title-font font-medium italic text-lg text-gray-500 mb-4">Industrial and Counseling Psychologist | Industrial Trainer | Wellbeing Assessor</h3>
+                <p className="mb-4 text-gray-700 text-justify">
+                Dedicated and compassionate Industrial and Counseling 
+                Psychologist with extensive experience in enhancing
+                 organizational effectiveness, employee well-being, 
+                 and personal development. Proven track record as an 
+                 Industrial Trainer and Wellbeing Assessor, empowering 
+                 individuals and teams to reach their full potential.
                 </p>
-                <p className="text-gray-500 font-semibold">Co-Founder & COO</p>
+                <p className="text-gray-500 font-semibold mb-4">Co-Founder & COO</p>
+                <Link href={'/foundershrikant'}>
+                <button 
+                // className="text-red-500 mx-auto"
+                className=" bg-red-500 text-white rounded-full px-4 py-2 transition duration-300 ease-in-out  font-semibold"
+                >
+                Read More</button>
+              
+                </Link>
               </div>
             </div>
           </div>

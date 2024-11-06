@@ -47,7 +47,6 @@ export default function AdminLogin() {
     let response = await res.json()
     console.log("response", response)
     console.log('Email:', email, 'Password:', password);
-   
     setEmail("");
     setPassword("")
 
@@ -67,26 +66,29 @@ export default function AdminLogin() {
         pauseOnHover: true,
         draggable: true,
         progress: undefined,
+        hideProgressBar: false,
         theme: "light",
     });
-
       setTimeout(() => {
         router.push(`${BASE_URL}/admin/blogform`)
       }, 1000)
-    } if (!response.success) {
-      toast.update(loadingToastId, {
-        render: "Invalid Credentials",
-        type: 'error',
-        position: "top-left",
-        autoClose: 3000,
-        hideProgressBar: false,
-        closeOnClick: true,
-        pauseOnHover: true,
-        draggable: true,
-        progress: undefined,
-        theme: "light",
-      });
+    } 
+    else { toast.update(loadingToastId, {
+      render: "Invalid Credentials",
+      type: 'error',
+      position: "top-left",
+      autoClose: 3000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+      theme: "light",
+      isLoading: false,
+    });
     }
+     
+    
   };
   return (
     <div className="font-[sans-serif]">

@@ -19,7 +19,7 @@ async function handler(req, res) {
         if (admin.password !== hashedPassword) {
             return res.status(401).json({ success:false, message: "Invalid Email Id or Password" })
         }
-        const token = jwt.sign({email : admin.email},"jwtsecret",{expiresIn:"2d"})
+        const token = jwt.sign({email : admin.email},process.env.JWT_SECRET,{expiresIn:"1d"})
         return res.status(200).json({success:true, message: "Admin found, Login Successful",token})
     }
     catch (error) {

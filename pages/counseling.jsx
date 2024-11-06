@@ -78,7 +78,7 @@ function Counseling() {
             simple technique that has reaped success in the sector.
           </p>
           <br />
-          <Link href={'/counseling/about'}>
+          <Link href={'/foundershrikant'}>
             <button className="text-red-600 hover:bg-red-500 hover:text-white rounded-full p-2 transition duration-300 ease-in-out font-semibold text-lg">
               Read More
             </button>
@@ -168,11 +168,7 @@ function Counseling() {
                 families to address a variety of mental health issues that may interfere with satisfying
                 interpersonal relationships in the home and the workplace.
               </p>
-              <Link href="/services/counselling">
-                <button className="text-red-600 hover:bg-red-500 hover:text-white rounded-full p-2 transition duration-300 ease-in-out font-semibold text-lg">
-                  Read More
-                </button>
-              </Link>
+             
             </div>
           </div>
         </div>
@@ -188,11 +184,7 @@ function Counseling() {
                 Counselors, psychotherapists, and psychologists are encouraged to have ongoing supervision as long
                 as they are practicing in the field of mental health.
               </p>
-              <Link href="/services/counselling-supervision">
-                <button className="text-red-600 hover:bg-red-500 hover:text-white rounded-full p-2 transition duration-300 ease-in-out font-semibold text-lg">
-                  Read More
-                </button>
-              </Link>
+              
             </div>
           </div>
         </div>
@@ -214,11 +206,7 @@ function Counseling() {
                 Through workshops, one-on-one guidance, and tailored programs.
 
               </p>
-              <Link href="/services/school-education">
-                <button className="text-red-600 hover:bg-red-500 hover:text-white rounded-full p-2 transition duration-300 ease-in-out font-semibold text-lg">
-                  Read More
-                </button>
-              </Link>
+              
             </div>
           </div>
         </div>
@@ -235,11 +223,7 @@ function Counseling() {
                 Online counselling, the digital-age version of counselling services is a more accessible, convenient and discrete method of receiving therapy. In order to attend online counselling sessions,
                 clients and the therapist need access to fast internet connections and webcams.
               </p>
-              <Link href="/services/counselling-supervision">
-                <button className="text-red-600 hover:bg-red-500 hover:text-white rounded-full p-2 transition duration-300 ease-in-out font-semibold text-lg">
-                  Read More
-                </button>
-              </Link>
+             
             </div>
           </div>
         </div>
@@ -257,11 +241,7 @@ function Counseling() {
                 families, school students, teachers, industrial workers and supervisors.
                 Separate counselling is also provided to all sectors in educational and industrial field.
               </p>
-              <Link href="/services/counselling">
-                <button className="text-red-600 hover:bg-red-500 hover:text-white rounded-full p-2 transition duration-300 ease-in-out font-semibold text-lg">
-                  Read More
-                </button>
-              </Link>
+              
             </div>
           </div>
         </div>
@@ -278,11 +258,7 @@ function Counseling() {
                 Come join us for one of our talks, workshops and be life long learners with us.
                 Our team have been affiliated with multi-national corporations in Singapore and in the region.
               </p>
-              <Link href="/services/counselling-supervision">
-                <button className="text-red-600 hover:bg-red-500 hover:text-white rounded-full p-2 transition duration-300 ease-in-out font-semibold text-lg">
-                  Read More
-                </button>
-              </Link>
+              
             </div>
           </div>
         </div>
