@@ -82,7 +82,7 @@ function ChangePassword(){
                 theme: "light",
             });
             setTimeout(()=>{
-                router.push('admin')
+                router.push('/admin')
             }, 1000)
         } else {
             toast.update(loadingToastId, {

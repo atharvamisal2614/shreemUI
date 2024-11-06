@@ -13,7 +13,7 @@ const Blogs = ({ blogs }) => {
         const shareData = {
             title: blog.title,
             text: 'Check out this blog!',
-            url: `${BASE_URL}/blog/${blog.slug}`,
+            url: `${BASE_URL}/blogs/${blog.slug}`,
         };
 
         if (navigator.share) {
