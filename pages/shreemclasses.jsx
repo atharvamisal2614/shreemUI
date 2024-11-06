@@ -28,15 +28,10 @@ function shreemclasses() {
             Elevate Your Child&apos;s Learning Journey
           </p>
           <p className="leading-7 tracking-wide text-gray-500 text-lg text-center md:text-justify mt-2">
-            At Shreem Classes, we're committed to providing comprehensive academic support and holistic development for students of all ages. Our experienced faculty is dedicated to fostering a love of learning and empowering students to reach their full potential.
+            At Shreem Classes, we&apos;re committed to providing comprehensive academic support and holistic development for students of all ages. Our experienced faculty is dedicated to fostering a love of learning and empowering students to reach their full potential.
 
           </p>
-          <p className="leading-7 tracking-wide text-gray-500 text-lg text-center md:text-left">
-
-          </p>
-          <p className="leading-7 tracking-wide text-gray-500 text-lg text-center md:text-left">
-
-          </p>
+          
         </div>
 
         {/* Image Section */}

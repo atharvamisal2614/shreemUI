@@ -92,7 +92,7 @@ export default function FounderShrikant() {
         <section className="mb-8">
           <h3 className="text-lg font-semibold text-gray-800 mb-2">Philosophy</h3>
           <blockquote className="italic text-gray-600 border-l-4 border-yellow-500 pl-4">
-            "Dr. Shrikant Kulange believes in the power of enhancing organizational health and employee well-being. His holistic approach helps organizations and individuals achieve balance, productivity, and fulfillment."
+            &quot;Dr. Shrikant Kulange believes in the power of enhancing organizational health and employee well-being. His holistic approach helps organizations and individuals achieve balance, productivity, and fulfillment.&quot;
           </blockquote>
         </section>
 
@@ -123,7 +123,7 @@ export default function FounderShrikant() {
         <section className="mb-8">
           <h3 className="text-lg font-semibold text-gray-800 mb-2">Testimonial</h3>
           <p className="italic text-gray-600">
-            "Shrikant has been instrumental in enhancing our organization&apos;s performance and employee well-being. Their expertise in industrial psychology, counseling, and training has been invaluable." - Dr. Ambekar, Alkyl Amines
+            &quot;Shrikant has been instrumental in enhancing our organization&apos;s performance and employee well-being. Their expertise in industrial psychology, counseling, and training has been invaluable.&quot; - Dr. Ambekar, Alkyl Amines
           </p>
         </section>
         <div className="flex justify-end items-center space-x-2 md:space-x-4">

@@ -73,7 +73,7 @@ export default function founderyashashri() {
         <section className="mb-8">
           <h3 className="text-lg font-semibold text-gray-800 mb-2">Philosophy</h3>
           <blockquote className="italic text-gray-600 border-l-4 border-yellow-500 pl-4">
-            "Dr. Yashashri Patil believes that every individual possesses the innate potential for growth, transformation, and self-actualization. Through a holistic approach, Dr. Yashashri empowers clients to harmonize their body, mind, and spirit, unlocking their true potential and living a purpose-driven life."
+            &quot;Dr. Yashashri Patil believes that every individual possesses the innate potential for growth, transformation, and self-actualization. Through a holistic approach, Dr. Yashashri empowers clients to harmonize their body, mind, and spirit, unlocking their true potential and living a purpose-driven life.&quot;
           </blockquote>
         </section>
 
@@ -92,7 +92,7 @@ export default function founderyashashri() {
         {/* Contact Section */}
         <section className="mb-8">
           <h3 className="text-lg font-semibold text-gray-800 mb-2">Contact</h3>
-          <Link href={'tel:9028835835'}>
+          <Link href="tel:9028835835">
           <p className="text-gray-900 font-bold">Phone: 9028835835</p>
           </Link>
         </section>
@@ -100,7 +100,7 @@ export default function founderyashashri() {
         {/* Testimonial Section */}
         <section className="mb-8">
           <h3 className="text-lg font-semibold text-gray-800 mb-2">Testimonial</h3>
-          <p className="italic text-gray-600">"Dr. Yashashri Patil has been instrumental in my personal growth journey. Their unique blend of coaching, yoga, and astrology has helped me find clarity, confidence, and inner peace." - Abhijit Chandorkar</p>
+          <p className="italic text-gray-600">&quot;Dr. Yashashri Patil has been instrumental in my personal growth journey. Their unique blend of coaching, yoga, and astrology has helped me find clarity, confidence, and inner peace.&quot; - Abhijit Chandorkar</p>
         </section>
 
         <div className="flex justify-end items-center space-x-2 md:space-x-4">
