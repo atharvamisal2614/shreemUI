@@ -19,13 +19,13 @@ function ChangePassword(){
 
     useEffect(()=>{
         if(!localStorage.getItem("token")){
-            router.push(`${BASE_URL}/admin`)
+            router.push('/admin')
         }
     })
     
     const handleLogout = () => {
         localStorage.removeItem("token");
-        router.push(`${BASE_URL}/admin`);
+        router.push('/admin');
       };
 
     const handlecurrentPassword = (e) => {
@@ -58,7 +58,7 @@ function ChangePassword(){
             theme: "light",
         });
 
-        const res = await fetch(`${BASE_URL}/api/changepassword`, {
+        const res = await fetch('/api/changepassword', {
             method : "PATCH",
             headers: {
                 "Content-Type": "application/json",
@@ -82,7 +82,7 @@ function ChangePassword(){
                 theme: "light",
             });
             setTimeout(()=>{
-                router.push(`${BASE_URL}/admin`)
+                router.push('admin')
             }, 1000)
         } else {
             toast.update(loadingToastId, {

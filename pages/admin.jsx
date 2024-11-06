@@ -1,7 +1,6 @@
 import { useEffect, useState } from 'react';
 import Image from 'next/image';
 import { useRouter } from 'next/router';
-import { BASE_URL } from '@/utils/config';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { AiFillEye, AiFillEyeInvisible } from "react-icons/ai";
@@ -11,7 +10,7 @@ export default function AdminLogin() {
 
   useEffect(()=>{
     if(localStorage.getItem("token")){
-      router.push(`${BASE_URL}/admin/blogform`)
+      router.push('/admin/blogform')
     } 
   },[])
 
@@ -37,7 +36,7 @@ export default function AdminLogin() {
   });
 
     const data = { email, password }
-    let res = await fetch(`${BASE_URL}/api/login`, {
+    let res = await fetch('/api/login', {
       method: 'POST',
       headers: {
         'content-type': 'application/json',
@@ -70,7 +69,7 @@ export default function AdminLogin() {
         theme: "light",
     });
       setTimeout(() => {
-        router.push(`${BASE_URL}/admin/blogform`)
+        router.push('admin/blogform')
       }, 1000)
     } 
     else { toast.update(loadingToastId, {

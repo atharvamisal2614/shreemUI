@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useRouter } from "next/router";
 import { FaUserCircle } from "react-icons/fa";
-import { BASE_URL } from "@/utils/config";
+
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
@@ -27,13 +27,13 @@ export default function BlogForm() {
 
   useEffect(() => {
     if (!localStorage.getItem("token")) {
-      router.push(`${BASE_URL}/admin`);
+      router.push('/admin');
     }
   }, []);
 
   const handleLogout = () => {
     localStorage.removeItem("token");
-    router.push(`${BASE_URL}/admin`);
+    router.push('/admin');
   };
    const handleTitle = (e) =>{
     setTitle(e.target.value)
@@ -113,7 +113,7 @@ export default function BlogForm() {
     }
 
     try {
-        const res = await fetch(`${BASE_URL}/api/blogpost`, {
+        const res = await fetch('/api/blogpost', {
             method: "POST",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify({ 
@@ -148,7 +148,7 @@ export default function BlogForm() {
             });
 
             setTimeout(() => {
-                router.push(`${BASE_URL}/admin/allblogs`);
+                router.push('/admin/allblogs');
             }, 1000);
         } else {
   
@@ -209,19 +209,19 @@ export default function BlogForm() {
         {showMenu && (
           <div className="mt-4 bg-white shadow-lg rounded-lg py-2 px-4 absolute top-16 transition-transform duration-300 ease-out transform">
             <button
-              onClick={() => router.push(`${BASE_URL}/admin/allblogs`)}
+              onClick={() => router.push('/admin/allblogs')}
               className="w-full text-center text-gray-700 font-libreBaskerVille font-bold hover:text-yellow-500 py-2 transition duration-200"
             >
               All Blogs
             </button>
             <button
-              onClick={() => router.push(`${BASE_URL}/admin/blogform`)}
+              onClick={() => router.push('/admin/blogform')}
               className="w-full text-center text-gray-700 font-libreBaskerVille font-bold hover:text-yellow-500 py-2 transition duration-200"
             >
               Add Blogs
             </button>
             <button
-              onClick={() => router.push(`${BASE_URL}/admin/changepassword`)}
+              onClick={() => router.push('/admin/changepassword')}
               className="w-full text-center text-gray-700 font-libreBaskerVille font-bold hover:text-yellow-500 py-2 transition duration-200"
             >
               Change Password
