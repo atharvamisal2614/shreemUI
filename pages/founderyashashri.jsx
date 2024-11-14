@@ -1,4 +1,4 @@
-import { FaArrowRight} from 'react-icons/fa';
+import { FaArrowRight } from 'react-icons/fa';
 import Link from 'next/link';
 import Image from 'next/image';
 
@@ -6,19 +6,19 @@ export default function founderyashashri() {
   return (
     <div className="bg-gray-100 min-h-screen">
       {/* Hero Section */}
-     
+
 
       {/* Content Section */}
-      <div className="max-w-5xl mx-auto p-6 sm:p-10 bg-white rounded-lg shadow-lg -mt-20 relative">
-   
-      <Image
-                  alt="founder"
-                  className="w-28 h-28 md:w-40 md:h-40 mb-4 rounded-full object-cover object-left mt-20"
-                  src="/images/shreem-founder-1.jpg"
-                  width={400} height={400}
-                />
-   
-      
+      <div className="max-w-5xl mx-auto p-6 sm:p-10 bg-white rounded-lg shadow-lg relative">
+
+        <Image
+          alt="founder"
+          className="w-28 h-28 md:w-40 md:h-40 mb-4 rounded-full object-cover object-left mt-5"
+          src="/images/shreem-founder-1.jpg"
+          width={400} height={400}
+        />
+
+
         <h1 className="text-3xl font-bold text-gray-800 text-start mb-4">
           Dr. Yashashri Patil
         </h1>
@@ -93,7 +93,7 @@ export default function founderyashashri() {
         <section className="mb-8">
           <h3 className="text-lg font-semibold text-gray-800 mb-2">Contact</h3>
           <Link href="tel:9028835835">
-          <p className="text-gray-900 font-bold">Phone: 9028835835</p>
+            <p className="text-gray-900 font-bold">Phone: 9028835835</p>
           </Link>
         </section>
 
@@ -104,13 +104,13 @@ export default function founderyashashri() {
         </section>
 
         <div className="flex justify-end items-center space-x-2 md:space-x-4">
-      <Link href="/foundershrikant" className="flex font-bold items-center text-red-500 cursor-pointer hover:underline">
- 
-          <span>Read more about Shrikant Kulange</span>
-          <FaArrowRight className="ml-1 " />
+          <Link href="/foundershrikant" className="flex font-bold items-center text-red-500 cursor-pointer hover:underline">
 
-      </Link>
-    </div>
+            <span>Read more about Shrikant Kulange</span>
+            <FaArrowRight className="ml-1 " />
+
+          </Link>
+        </div>
 
 
       </div>

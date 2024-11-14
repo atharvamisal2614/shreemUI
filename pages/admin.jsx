@@ -8,11 +8,11 @@ import { AiFillEye, AiFillEyeInvisible } from "react-icons/ai";
 export default function AdminLogin() {
 
 
-  useEffect(()=>{
-    if(localStorage.getItem("token")){
+  useEffect(() => {
+    if (localStorage.getItem("token")) {
       router.push('/admin/blogform')
-    } 
-  },[])
+    }
+  }, [])
 
 
   const [email, setEmail] = useState('');
@@ -33,7 +33,7 @@ export default function AdminLogin() {
       draggable: false,
       progress: undefined,
       theme: "light",
-  });
+    });
 
     const data = { email, password }
     let res = await fetch('/api/login', {
@@ -54,8 +54,8 @@ export default function AdminLogin() {
 
     if (response.success) {
 
-      localStorage.setItem("token",response.token)
-      
+      localStorage.setItem("token", response.token)
+
       toast.update(loadingToastId, {
         render: 'Welcome! Login Successful',
         type: 'success',
@@ -67,27 +67,28 @@ export default function AdminLogin() {
         progress: undefined,
         hideProgressBar: false,
         theme: "light",
-    });
+      });
       setTimeout(() => {
         router.push('admin/blogform')
       }, 1000)
-    } 
-    else { toast.update(loadingToastId, {
-      render: "Invalid Credentials",
-      type: 'error',
-      position: "top-left",
-      autoClose: 3000,
-      hideProgressBar: false,
-      closeOnClick: true,
-      pauseOnHover: true,
-      draggable: true,
-      progress: undefined,
-      theme: "light",
-      isLoading: false,
-    });
     }
-     
-    
+    else {
+      toast.update(loadingToastId, {
+        render: "Invalid Credentials",
+        type: 'error',
+        position: "top-left",
+        autoClose: 3000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "light",
+        isLoading: false,
+      });
+    }
+
+
   };
   return (
     <div className="font-[sans-serif]">

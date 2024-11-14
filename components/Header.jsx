@@ -7,19 +7,19 @@ export default function Header() {
       <div className="grid grid-cols-2 gap-4 md:grid-cols-2 md:gap-6">
 
         <div className="relative group">
- 
+
           <h2 className="absolute font-serif top-4 left-1/2 transform -translate-x-1/2 text-white text-lg md:text-2xl  font-bold">
-           Counselling Office
+            Counselling Office
           </h2>
           <Link href="/counseling">
             <Image
-              src="/counseling-1.jpg" 
+              src="/counseling-1.jpg"
               alt="Portrait Image 1"
               width={5000}
               height={350}
               className="object-cover w-full h-full"
             />
-          
+
             <div className="absolute inset-0 flex flex-col justify-end p-4 bg-black bg-opacity-0 group-hover:bg-opacity-50 transition-opacity duration-300">
               <button className="bg-red-800 group-hover:bg-red-500 text-white font-bold py-2 px-6 rounded-full transition-all mb-4 mx-auto">
                 Discover More
@@ -40,21 +40,21 @@ export default function Header() {
           </Link>
         </div>
 
-     
+
         <div className="relative group">
-        
+
           <h2 className="absolute font-serif top-4 left-1/2 transform -translate-x-1/2 text-white text-lg md:text-2xl font-bold">
-          Shreem Classroom
+            Shreem Classroom
           </h2>
           <Link href="/shreemclasses">
             <Image
-              src="/shreem.webp" 
+              src="/shreem.webp"
               alt="Portrait Image 2"
               width={5000}
               height={350}
               className="object-cover w-full h-full"
             />
-            
+
             <div className="absolute inset-0 flex flex-col justify-end p-4 bg-black bg-opacity-0 group-hover:bg-opacity-50 transition-opacity duration-300">
               <button className="bg-red-800 group-hover:bg-red-500 text-white font-bold py-2 px-6 rounded-full transition-all mb-4 mx-auto">
                 Discover More
@@ -76,7 +76,7 @@ export default function Header() {
         </div>
       </div>
 
-{/*   
+      {/*   
       <div className="mt-4 relative group">
       
      
@@ -114,7 +114,7 @@ export default function Header() {
         </Link>
       </div> */}
 
-    
+
       <style jsx>{`
         @media (max-width: 768px) {
           .grid-cols-2 {

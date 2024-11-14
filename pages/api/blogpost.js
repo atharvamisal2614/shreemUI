@@ -1,19 +1,16 @@
 import dbConnect from "@/middleware/mongoose";
 import Blog from "@/models/Blog";
-
 export const config = {
-  api: {
-    bodyParser: {
-      sizeLimit: '5mb',
+    api: {
+        bodyParser: {
+            sizeLimit: '5mb',
+        },
     },
-  },
 };
-
 async function handler(req, res) {
     if (req.method !== 'POST') {
         return res.status(405).json({ message: "This method is not allowed" })
     }
-
     const { title,
         slug,
         thumbnail,
@@ -24,7 +21,14 @@ async function handler(req, res) {
         bulletpoint1,
         bulletpoint2,
         bulletpoint3,
+        bulletpoint4,
+        bulletpoint5,
+        bulletpoint6,
+        bulletpoint7,
+        bulletpoint8,
+        bulletpoint9,
         conclusion } = req.body;
+
     try {
         const newBlog = new Blog({
             title,
@@ -37,6 +41,12 @@ async function handler(req, res) {
             bulletpoint1,
             bulletpoint2,
             bulletpoint3,
+            bulletpoint4,
+            bulletpoint5,
+            bulletpoint6,
+            bulletpoint7,
+            bulletpoint8,
+            bulletpoint9,
             conclusion
         })
         await newBlog.save();

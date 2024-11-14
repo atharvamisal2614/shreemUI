@@ -4,15 +4,18 @@ import { FaArrowRight } from 'react-icons/fa';
 
 export default function FounderShrikant() {
   return (
-    <div className="bg-gray-100 min-h-screen">
+    <div className="bg-gray-100 ">
       {/* Hero Section */}
-    
+
 
       {/* Content Section */}
-      <div className="max-w-5xl mx-auto p-6 sm:p-10 bg-white rounded-lg shadow-lg -mt-20 relative">
+      <div className="max-w-5xl mx-auto p-6 sm:p-10 
+      bg-white rounded-lg shadow-lg 
+       relative"
+      >
         <Image
           alt="founder"
-          className="w-28 h-28 md:w-40 md:h-40 mb-4 rounded-full object-cover object-left mt-20"
+          className="w-28 h-28 md:w-40 md:h-40 mb-4 rounded-full object-cover object-left mt-5"
           src="/images/founder-shreekant.jpg"
           width={400}
           height={400}
@@ -112,10 +115,10 @@ export default function FounderShrikant() {
         <section className="mb-8">
           <h3 className="text-lg font-semibold text-gray-800 mb-2">Contact</h3>
           <Link href="tel:9890420209">
-          <p className="text-gray-900 font-bold">Phone: 9890420209</p>
-</Link>
-<Link href="mailto:kulange@gmail.com">
-          <p className="text-gray-900 font-bold">Email: kulange@gmail.com</p> 
+            <p className="text-gray-900 font-bold">Phone: 9890420209</p>
+          </Link>
+          <Link href="mailto:kulange@gmail.com">
+            <p className="text-gray-900 font-bold">Email: kulange@gmail.com</p>
           </Link>
         </section>
 
@@ -127,13 +130,13 @@ export default function FounderShrikant() {
           </p>
         </section>
         <div className="flex justify-end items-center space-x-2 md:space-x-4">
-      <Link href="/founderyashashri" className="flex font-bold items-center text-red-500 cursor-pointer hover:underline">
- 
-          <span>Read more about Yashashree Patil</span>
-          <FaArrowRight className="ml-1 " />
+          <Link href="/founderyashashri" className="flex font-bold items-center text-red-500 cursor-pointer hover:underline">
 
-      </Link>
-    </div>
+            <span>Read more about Yashashree Patil</span>
+            <FaArrowRight className="ml-1 " />
+
+          </Link>
+        </div>
       </div>
     </div>
   );

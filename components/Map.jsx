@@ -43,7 +43,7 @@ function Map() {
               </Link>
             </div>
           </div>
-        
+
           <div className="flex flex-col mb-10 lg:items-start items-center">
             <div className="w-14 h-14 inline-flex items-center justify-center rounded-full bg-yellow-100 text-yellow-500 mb-5">
               <FaMicrophone className="w-9 h-9" />
@@ -78,7 +78,7 @@ function Map() {
             <div className="flex-grow">
               <h2 className="text-gray-900 text-lg title-font font-medium mb-3">Get In Touch</h2>
               <p className="leading-relaxed text-base">
-              Have questions about our classes or counseling services? Connect with us on WhatsApp! We&apos;re here to help you with personalized guidance, class details, and all the support you need to get started on your journey!
+                Have questions about our classes or counseling services? Connect with us on WhatsApp! We&apos;re here to help you with personalized guidance, class details, and all the support you need to get started on your journey!
               </p>
               <Link href={'https://wa.me/919890420209'} className="mt-3 text-red-500 inline-flex items-center  font-semibold">
                 Connect with us

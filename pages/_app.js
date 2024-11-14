@@ -12,22 +12,19 @@ export default function App({ Component, pageProps }) {
   const router = useRouter();
 
   useEffect(() => {
+    router.events.on("routeChangeStart", () => {
+      setProgress(40);
+    });
+    router.events.on("routeChangeComplete", () => {
+      setProgress(100);
+    });
 
-
- router.events.on("routeChangeStart", () => {
-        setProgress(40);
-  });
-
- router.events.on("routeChangeComplete", () => {
-        setProgress(100);
-   });
-
-}, []);
+  }, []);
 
   return (
     <>
-  <Navbar />
-  <LoadingBar
+      <Navbar />
+      <LoadingBar
         color="red"
         progress={progress}
         waitingTime={400}
@@ -35,11 +32,11 @@ export default function App({ Component, pageProps }) {
           setProgress(0);
         }}
       />
-  <Component {...pageProps} />
-  <Footer />
-  </>
-)
-  
-  
-  
+      <Component {...pageProps} />
+      <Footer />
+    </>
+  )
+
+
+
 }

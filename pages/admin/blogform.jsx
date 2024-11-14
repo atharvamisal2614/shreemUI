@@ -1,13 +1,12 @@
 import React, { useEffect, useState } from "react";
 import { useRouter } from "next/router";
 import { FaUserCircle } from "react-icons/fa";
-
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
 export default function BlogForm() {
   const router = useRouter();
-  const [title,setTitle] = useState('');
+  const [title, setTitle] = useState('');
   const [slug, setSlug] = useState('');
   const [thumbnail, setThumbnail] = useState('');
   const [paragraph1, setParagraph1] = useState('');
@@ -17,13 +16,15 @@ export default function BlogForm() {
   const [bulletpoint1, setBulletPoint1] = useState("");
   const [bulletpoint2, setBulletPoint2] = useState("");
   const [bulletpoint3, setBulletPoint3] = useState("");
+  const [bulletpoint4, setBulletPoint4] = useState("");
+  const [bulletpoint5, setBulletPoint5] = useState("");
+  const [bulletpoint6, setBulletPoint6] = useState("");
+  const [bulletpoint7, setBulletPoint7] = useState("");
+  const [bulletpoint8, setBulletPoint8] = useState("");
+  const [bulletpoint9, setBulletPoint9] = useState("");
   const [conclusion, setConclusion] = useState("")
   const [showMenu, setShowMenu] = useState(false);
-
-
   const [fileSizeError, setFileSizeError] = useState(false);
-
-
 
   useEffect(() => {
     if (!localStorage.getItem("token")) {
@@ -35,13 +36,13 @@ export default function BlogForm() {
     localStorage.removeItem("token");
     router.push('/admin');
   };
-   const handleTitle = (e) =>{
+  const handleTitle = (e) => {
     setTitle(e.target.value)
-   }
-   const handleSlug = (e) =>{
+  }
+  const handleSlug = (e) => {
     setSlug(e.target.value)
-   }
-   const handleThumbnail = (e) => {
+  }
+  const handleThumbnail = (e) => {
     const file = e.target.files[0];
     if (file) {
       if (file.size > 5 * 1024 * 1024) { // 5 MB limit
@@ -57,51 +58,68 @@ export default function BlogForm() {
       }
     }
   };
-  
- 
-   const handleparagraph1 = (e) =>{
+  const handleparagraph1 = (e) => {
     setParagraph1(e.target.value)
-   }
-   const handleparagraph2 = (e) =>{
+  }
+  const handleparagraph2 = (e) => {
     setParagraph2(e.target.value)
-   }
-   const handleparagraph3 = (e) =>{
+  }
+  const handleparagraph3 = (e) => {
     setParagraph3(e.target.value)
-   }
-   const handleHyperlink = (e) =>{
+  }
+  const handleHyperlink = (e) => {
     setHyperlink(e.target.value)
-   }
-   const handleBulletPoint1 = (e) =>{
+  }
+  const handleBulletPoint4 = (e) => {
+    setBulletPoint4(e.target.value)
+  }
+  const handleBulletPoint5 = (e) => {
+    setBulletPoint5(e.target.value)
+  }
+  const handleBulletPoint6 = (e) => {
+    setBulletPoint6(e.target.value)
+  }
+
+  const handleBulletPoint7 = (e) => {
+    setBulletPoint7(e.target.value)
+  }
+  const handleBulletPoint8 = (e) => {
+    setBulletPoint8(e.target.value)
+  }
+  const handleBulletPoint9 = (e) => {
+    setBulletPoint9(e.target.value)
+  }
+
+  const handleBulletPoint1 = (e) => {
     setBulletPoint1(e.target.value)
-   }
-   const handleBulletPoint2 = (e) =>{
+  }
+  const handleBulletPoint2 = (e) => {
     setBulletPoint2(e.target.value)
-   }
-   const handleBulletPoint3 = (e) =>{
+  }
+  const handleBulletPoint3 = (e) => {
     setBulletPoint3(e.target.value)
-   }
-   const handleConclusion = (e) =>{
+  }
+
+  const handleConclusion = (e) => {
     setConclusion(e.target.value)
-   }
-   const handleSubmit = async (e) => {
+  }
+  const handleSubmit = async (e) => {
     e.preventDefault();
 
-
     const loadingToastId = toast.loading('Uploading your Blog...', {
-        position: "top-left",
-        hideProgressBar: true,
-        closeOnClick: false,
-        pauseOnHover: false,
-        draggable: false,
-        progress: undefined,
-        theme: "light",
+      position: "top-left",
+      hideProgressBar: true,
+      closeOnClick: false,
+      pauseOnHover: false,
+      draggable: false,
+      progress: undefined,
+      theme: "light",
     });
-
     if (fileSizeError) {
       toast.update(loadingToastId, {
         render: 'Please select image less than 5 MB...',
         type: 'error',
-        isLoading: false, 
+        isLoading: false,
         autoClose: 5000,
         hideProgressBar: false,
         closeOnClick: true,
@@ -109,82 +127,92 @@ export default function BlogForm() {
         draggable: true,
         progress: undefined,
         theme: "light",
-    });
+      });
     }
 
     try {
-        const res = await fetch('/api/blogpost', {
-            method: "POST",
-            headers: { "Content-Type": "application/json" },
-            body: JSON.stringify({ 
-              title, 
-              slug, 
-              thumbnail, 
-              paragraph1, 
-              paragraph2, 
-              paragraph3, 
-              hyperlink, 
-              bulletpoint1,
-              bulletpoint2,
-              bulletpoint3,
-              conclusion  }),
-        });
+      const res = await fetch('/api/blogpost', {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          title,
+          slug,
+          thumbnail,
+          paragraph1,
+          paragraph2,
+          paragraph3,
+          hyperlink,
+          bulletpoint1,
+          bulletpoint2,
+          bulletpoint3,
+          bulletpoint4,
+          bulletpoint5,
+          bulletpoint6,
+          bulletpoint7,
+          bulletpoint8,
+          bulletpoint9,
+          conclusion
+        }),
+      });
 
-        const response = await res.json();
+      const response = await res.json();
 
-        if (response.success) {
-    
-            toast.update(loadingToastId, {
-                render: 'Blog Created Successfully!',
-                type: 'success',
-                isLoading: false, 
-                autoClose: 5000,
-                hideProgressBar: false,
-                closeOnClick: true,
-                pauseOnHover: true,
-                draggable: true,
-                progress: undefined,
-                theme: "light",
-            });
+      if (response.success) {
 
-            setTimeout(() => {
-                router.push('/admin/allblogs');
-            }, 1000);
-        } else {
-  
-            toast.update(loadingToastId, {
-                render: 'Please check Image size is < 5 MB',
-                type: 'error',
-                isLoading: false, 
-                autoClose: 5000,
-                hideProgressBar: false,
-                closeOnClick: true,
-                pauseOnHover: true,
-                draggable: true,
-                progress: undefined,
-                theme: "light",
-            });
-        }
-    } catch (error) {
-      
         toast.update(loadingToastId, {
-            render: 'An error occurred. Please try again.',
-            type: 'error',
-            isLoading: false, 
-            autoClose: 5000,
-            hideProgressBar: false,
-            closeOnClick: true,
-            pauseOnHover: true,
-            draggable: true,
-            progress: undefined,
-            theme: "light",
+          render: 'Blog Created Successfully!',
+          type: 'success',
+          isLoading: false,
+          autoClose: 5000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+          theme: "light",
         });
+
+        setTimeout(() => {
+          router.push('/admin/allblogs');
+        }, 1000);
+      }
+
+
+      else {
+
+        toast.update(loadingToastId, {
+          render: 'Please check Image size is < 5 MB',
+          type: 'error',
+          isLoading: false,
+          autoClose: 5000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+          theme: "light",
+        });
+      }
+    } catch (error) {
+
+      toast.update(loadingToastId, {
+        render: 'An error occurred. Please try again.',
+        type: 'error',
+        isLoading: false,
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "light",
+      });
     }
-};
+  };
 
   return (
     <div className="relative">
-    <ToastContainer
+      <ToastContainer
         position="top-left"
         autoClose={3000}
         hideProgressBar={false}
@@ -226,7 +254,7 @@ export default function BlogForm() {
             >
               Change Password
             </button>
-           
+
             <button
               onClick={handleLogout}
               className="w-full text-center text-gray-700 font-libreBaskerVille font-bold hover:text-red-600 py-2 transition duration-200"
@@ -259,7 +287,7 @@ export default function BlogForm() {
               name="title"
               value={title} onChange={handleTitle}
               placeholder="Eg. How to learn JavaScript"
-              className="w-full px-4 py-2 border rounded-lg outline-none focus:ring-2 focus:ring-yellow-400" 
+              className="w-full px-4 py-2 border rounded-lg outline-none focus:ring-2 focus:ring-yellow-400"
               required
             />
           </div>
@@ -274,9 +302,9 @@ export default function BlogForm() {
               name="slug"
               value={slug} onChange={handleSlug}
               placeholder="Eg. How-to-learn-JavaScript"
-              className="w-full px-4 py-2 border rounded-lg outline-none focus:ring-2 focus:ring-yellow-400" 
+              className="w-full px-4 py-2 border rounded-lg outline-none focus:ring-2 focus:ring-yellow-400"
               required
-     
+
             />
           </div>
 
@@ -285,15 +313,15 @@ export default function BlogForm() {
               Add Thumbnail (Max Size : 5 MB):
             </label>
             <input
-  type="file"
-  id="thumbnail"
-  onChange={handleThumbnail}
-  accept="image/*"
-  className="w-full px-4 py-2 border rounded-lg outline-none focus:ring-2 focus:ring-yellow-400"
-/>
-{fileSizeError && (
-  <p className="text-red-500 mt-1">Image size exceeds 5 MB. Please upload a smaller image.</p>
-)}
+              type="file"
+              id="thumbnail"
+              onChange={handleThumbnail}
+              accept="image/*"
+              className="w-full px-4 py-2 border rounded-lg outline-none focus:ring-2 focus:ring-yellow-400"
+            />
+            {fileSizeError && (
+              <p className="text-red-500 mt-1">Image size exceeds 5 MB. Please upload a smaller image.</p>
+            )}
 
           </div>
 
@@ -312,6 +340,48 @@ export default function BlogForm() {
           </div>
 
           <div>
+            <label className="block text-gray-700 font-bold mb-2" htmlFor="bulletpoint1">
+              Bullet Point 1
+            </label>
+            <input
+              type="text"
+              id="bulletpoint1"
+              name="bulletpoint1"
+              value={bulletpoint1} onChange={handleBulletPoint1}
+              placeholder="Eg. Something"
+              className="w-full px-4 py-2 border rounded-lg outline-none focus:ring-2 focus:ring-yellow-400"
+            />
+          </div>
+
+          <div>
+            <label className="block text-gray-700 font-bold mb-2" htmlFor="bulletpoint2">
+              Bullet Point 2
+            </label>
+            <input
+              type="text"
+              id="bulletpoint2"
+              name="bulletpoint2"
+              value={bulletpoint2} onChange={handleBulletPoint2}
+              placeholder="Eg. Something"
+              className="w-full px-4 py-2 border rounded-lg outline-none focus:ring-2 focus:ring-yellow-400"
+            />
+          </div>
+
+          <div>
+            <label className="block text-gray-700 font-bold mb-2" htmlFor="bulletpoint3">
+              Bullet Point 3
+            </label>
+            <input
+              type="text"
+              id="bulletpoint3"
+              name="bulletpoint3"
+              value={bulletpoint3} onChange={handleBulletPoint3}
+              placeholder="Eg. something"
+              className="w-full px-4 py-2 border rounded-lg outline-none focus:ring-2 focus:ring-yellow-400"
+            />
+          </div>
+
+          <div>
             <label className="block text-gray-700 font-bold mb-2" htmlFor="paragraph1">
               Blog paragraph 2:
             </label>
@@ -322,6 +392,48 @@ export default function BlogForm() {
               rows="8"
               placeholder="Write your blog paragraph 2 here..."
               className="w-full px-4 py-2 border rounded-lg outline-none focus:ring-2 focus:ring-yellow-400 resize-none"
+            />
+          </div>
+
+          <div>
+            <label className="block text-gray-700 font-bold mb-2" htmlFor="bulletpoint1">
+              Bullet Point 1
+            </label>
+            <input
+              type="text"
+              id="bulletpoint1"
+              name="bulletpoint1"
+              value={bulletpoint4} onChange={handleBulletPoint4}
+              placeholder="Eg. Something"
+              className="w-full px-4 py-2 border rounded-lg outline-none focus:ring-2 focus:ring-yellow-400"
+            />
+          </div>
+
+          <div>
+            <label className="block text-gray-700 font-bold mb-2" htmlFor="bulletpoint2">
+              Bullet Point 2
+            </label>
+            <input
+              type="text"
+              id="bulletpoint2"
+              name="bulletpoint2"
+              value={bulletpoint5} onChange={handleBulletPoint5}
+              placeholder="Eg. Something"
+              className="w-full px-4 py-2 border rounded-lg outline-none focus:ring-2 focus:ring-yellow-400"
+            />
+          </div>
+
+          <div>
+            <label className="block text-gray-700 font-bold mb-2" htmlFor="bulletpoint3">
+              Bullet Point 3
+            </label>
+            <input
+              type="text"
+              id="bulletpoint3"
+              name="bulletpoint3"
+              value={bulletpoint6} onChange={handleBulletPoint6}
+              placeholder="Eg. something"
+              className="w-full px-4 py-2 border rounded-lg outline-none focus:ring-2 focus:ring-yellow-400"
             />
           </div>
 
@@ -340,8 +452,50 @@ export default function BlogForm() {
           </div>
 
           <div>
+            <label className="block text-gray-700 font-bold mb-2" htmlFor="bulletpoint1">
+              Bullet Point 1
+            </label>
+            <input
+              type="text"
+              id="bulletpoint1"
+              name="bulletpoint1"
+              value={bulletpoint7} onChange={handleBulletPoint7}
+              placeholder="Eg. Something"
+              className="w-full px-4 py-2 border rounded-lg outline-none focus:ring-2 focus:ring-yellow-400"
+            />
+          </div>
+
+          <div>
+            <label className="block text-gray-700 font-bold mb-2" htmlFor="bulletpoint2">
+              Bullet Point 2
+            </label>
+            <input
+              type="text"
+              id="bulletpoint2"
+              name="bulletpoint2"
+              value={bulletpoint8} onChange={handleBulletPoint8}
+              placeholder="Eg. Something"
+              className="w-full px-4 py-2 border rounded-lg outline-none focus:ring-2 focus:ring-yellow-400"
+            />
+          </div>
+
+          <div>
+            <label className="block text-gray-700 font-bold mb-2" htmlFor="bulletpoint3">
+              Bullet Point 3
+            </label>
+            <input
+              type="text"
+              id="bulletpoint3"
+              name="bulletpoint3"
+              value={bulletpoint9} onChange={handleBulletPoint9}
+              placeholder="Eg. something"
+              className="w-full px-4 py-2 border rounded-lg outline-none focus:ring-2 focus:ring-yellow-400"
+            />
+          </div>
+
+          <div>
             <label className="block text-gray-700 font-bold mb-2" htmlFor="hyperlink">
-              Hyperlink  <span className="text-red-500">*</span>
+              Hyperlink
             </label>
             <input
               type="text"
@@ -350,54 +504,10 @@ export default function BlogForm() {
               value={hyperlink} onChange={handleHyperlink}
               placeholder="Eg. https://google.com"
               className="w-full px-4 py-2 border rounded-lg outline-none focus:ring-2 focus:ring-yellow-400"
-              required
             />
           </div>
 
-          <div>
-            <label className="block text-gray-700 font-bold mb-2" htmlFor="bulletpoint1">
-              Bullet Point 1  <span className="text-red-500">*</span>
-            </label>
-            <input
-              type="text"
-              id="bulletpoint1"
-              name="bulletpoint1"
-              value={bulletpoint1} onChange={handleBulletPoint1}
-              placeholder="Eg. Something"
-              className="w-full px-4 py-2 border rounded-lg outline-none focus:ring-2 focus:ring-yellow-400"
-              required
-            />
-          </div>
 
-          <div>
-            <label className="block text-gray-700 font-bold mb-2" htmlFor="bulletpoint2">
-              Bullet Point 2  <span className="text-red-500">*</span>
-            </label>
-            <input
-              type="text"
-              id="bulletpoint2"
-              name="bulletpoint2"
-              value={bulletpoint2} onChange={handleBulletPoint2}
-              placeholder="Eg. Something"
-              className="w-full px-4 py-2 border rounded-lg outline-none focus:ring-2 focus:ring-yellow-400"
-              required
-            />
-          </div>
-
-          <div>
-            <label className="block text-gray-700 font-bold mb-2" htmlFor="bulletpoint3">
-              Bullet Point 3  <span className="text-red-500">*</span>
-            </label>
-            <input
-              type="text"
-              id="bulletpoint3"
-              name="bulletpoint3"
-              value={bulletpoint3} onChange={handleBulletPoint3}
-              placeholder="Eg. something"
-              className="w-full px-4 py-2 border rounded-lg outline-none focus:ring-2 focus:ring-yellow-400"
-              required
-            />
-          </div>
 
           <div>
             <label className="block text-gray-700 font-bold mb-2" htmlFor="conclusion">
@@ -409,7 +519,7 @@ export default function BlogForm() {
               name="conclusion"
               value={conclusion} onChange={handleConclusion}
               placeholder="Eg. How to learn JavaScript"
-              className="w-full px-4 py-2 border rounded-lg outline-none focus:ring-2 focus:ring-yellow-400" 
+              className="w-full px-4 py-2 border rounded-lg outline-none focus:ring-2 focus:ring-yellow-400"
               required
             />
           </div>
@@ -425,11 +535,3 @@ export default function BlogForm() {
     </div>
   );
 }
-
-
-
-
-
-
-
-

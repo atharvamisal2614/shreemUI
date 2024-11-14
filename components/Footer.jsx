@@ -1,5 +1,7 @@
 import React from 'react';
 import { FaFacebookF, FaTwitter, FaInstagram } from 'react-icons/fa';
+import { SiGmail } from "react-icons/si";
+import { IoCall } from "react-icons/io5";
 import Image from 'next/image';
 import Link from 'next/link';
 
@@ -7,15 +9,15 @@ const Footer = () => {
   return (
     <footer className="bg-yellow-400 text-gray-800 body-font">
       <div className="container mx-auto py-12 px-5 flex flex-col md:flex-row md:items-center">
-        
+
         {/* Logo Section */}
         <div className="md:w-1/4 text-center md:text-left mb-10 md:mb-0">
           <Image src={'/shreem-logo-og.png'} alt="logo" width={100} height={100} className="mx-auto" />
         </div>
-        
+
         {/* Information Sections */}
         <div className="flex-grow md:flex md:justify-between space-y-10 md:space-y-0 text-center md:text-left">
-          
+
           {/* Links Section */}
           <div>
             <h2 className="font-bold text-lg text-gray-900 mb-4">Explore</h2>
@@ -42,15 +44,18 @@ const Footer = () => {
             <p>
               <Link href="mailto:kulange@gmail.com" className="hover:text-gray-500">kulange@gmail.com</Link>
             </p>
-            <div className="flex justify-center md:justify-start space-x-4 mt-2">
-              <Link href="https://facebook.com" target="_blank" aria-label="Facebook" className="hover:text-blue-500">
+            <div className="flex justify-center  space-x-4 mt-2">
+              <Link href="https://www.facebook.com/share/1ARLFqg1Br/" target="_blank" aria-label="Facebook" className="hover:text-blue-500">
                 <FaFacebookF size={20} />
               </Link>
-              <Link href="https://instagram.com" target="_blank" aria-label="Instagram" className="hover:text-pink-600">
-                <FaInstagram size={20} />
+              <Link href="mailto:kulange@gmail.com" target="_blank" aria-label="Mail" className="hover:text-pink-600">
+                <SiGmail size={20} />
               </Link>
-              <Link href="https://twitter.com" target="_blank" aria-label="Twitter" className="hover:text-blue-400">
+              {/* <Link href="https://twitter.com" target="_blank" aria-label="Twitter" className="hover:text-blue-400">
                 <FaTwitter size={20} />
+              </Link> */}
+              <Link href="tel:+919890420209" target="_blank" aria-label="Twitter" className="hover:text-green-600">
+                <IoCall size={20} />
               </Link>
             </div>
           </div>
@@ -73,7 +78,7 @@ const Footer = () => {
       <div className="bg-yellow-400">
         <div className="container mx-auto py-4 px-5 flex flex-col sm:flex-row justify-center items-center text-center sm:text-left">
           <p className="text-gray-900 text-sm">© 2024 Shreem Education Hub</p>
-          
+
         </div>
       </div>
     </footer>

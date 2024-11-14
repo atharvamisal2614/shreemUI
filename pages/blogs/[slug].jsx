@@ -5,7 +5,6 @@ import { IoShareOutline } from "react-icons/io5";
 import Link from "next/link";
 import { FaArrowRight } from "react-icons/fa";
 
-
 function BlogSlugs({ blog }) {
     const [formattedDate, setFormattedDate] = useState("");
 
@@ -15,6 +14,18 @@ function BlogSlugs({ blog }) {
             const options = { year: "numeric", month: "long", day: "numeric" };
             setFormattedDate(date.toLocaleDateString(undefined, options));
         }
+
+        // Disable copy, paste, and cut using keyboard shortcuts
+        const handleKeyDown = (e) => {
+            if ((e.ctrlKey || e.metaKey) && (e.key === "c" || e.key === "x" || e.key === "v" || e.key === "a")) {
+                e.preventDefault();
+            }
+        };
+        document.addEventListener("keydown", handleKeyDown);
+
+        return () => {
+            document.removeEventListener("keydown", handleKeyDown);
+        };
     }, [blog.createdAt]);
 
     if (!blog) {
@@ -34,11 +45,16 @@ function BlogSlugs({ blog }) {
     };
 
     return (
-        <div className="max-w-3xl mx-auto p-12 sm:p-8 bg-white shadow-lg rounded-lg mt-6">
+        <div
+            className="max-w-screen-lg mx-auto px-4 sm:px-6 lg:px-8 py-12 bg-white shadow-lg rounded-lg mt-6 overflow-hidden no-select"
+            onContextMenu={(e) => e.preventDefault()} // Prevent right-click menu
+
+
+        >
             {/* Heading and Share Icon */}
             <div className="flex justify-between items-center">
-                <h1 className=" text-3xl font-bold text-gray-800 font-libreBaskerVille">{blog.title}</h1>
-                <button onClick={handleShare} className="text-gray-500 hover:text-red-400">
+                <h1 className="text-3xl font-bold text-gray-800 font-libreBaskerVille break-words">{blog.title}</h1>
+                <button onClick={handleShare} className="text-red-400">
                     <IoShareOutline className="text-2xl mb-2" />
                 </button>
             </div>
@@ -49,40 +65,60 @@ function BlogSlugs({ blog }) {
             </p>
 
             {/* Blog Content */}
-            <div className="mt-8 text-justify text-lg font-sans text-gray-800">
-                <p className="mb-8">{blog.paragraph1}</p>
-                <p className="mb-8">{blog.paragraph2}</p>
-                <p className="mb-8">{blog.paragraph3}</p>
-                
-                {/* Hyperlink */}
-                <div className="mt-8">
-                    <p>
-                     <span>Click here to know more : </span> <Link href={blog.hyperlink || "/"} className="text-blue-500 hover:underline" passHref>
-                {blog.hyperlink}
-                        </Link>
-                    </p>
-                </div>
+            <div className="mt-8 text-justify text-lg  text-gray-800 break-words whitespace-normal no-select font-palanQuin">
+                <p className="mb-4">{blog.paragraph1}</p>
 
-                {/* Bullet Points */}
-                <ul className="list-disc list-inside mt-8 space-y-2">
-                    <li>{blog.bulletpoint1}</li>
-                    <li>{blog.bulletpoint2}</li>
-                    <li>{blog.bulletpoint3}</li>
+                <ul className="list-disc list-inside mb-8 space-y-2">
+                    {blog.bulletpoint1 && <li>{blog.bulletpoint1}</li>}
+                    {blog.bulletpoint2 && <li>{blog.bulletpoint2}</li>}
+                    {blog.bulletpoint3 && <li>{blog.bulletpoint3}</li>}
                 </ul>
 
+                <p className="mb-4">{blog.paragraph2}</p>
+
+                <ul className="list-disc list-inside mb-8 space-y-2">
+                    {blog.bulletpoint4 && <li>{blog.bulletpoint4}</li>}
+                    {blog.bulletpoint5 && <li>{blog.bulletpoint5}</li>}
+                    {blog.bulletpoint6 && <li>{blog.bulletpoint6}</li>}
+                </ul>
+
+                <p className="mb-4">{blog.paragraph3}</p>
+
+                <ul className="list-disc list-inside mb-8 space-y-2">
+                    {blog.bulletpoint7 && <li>{blog.bulletpoint7}</li>}
+                    {blog.bulletpoint8 && <li>{blog.bulletpoint8}</li>}
+                    {blog.bulletpoint9 && <li>{blog.bulletpoint9}</li>}
+                </ul>
+
+                {/* Hyperlink */}
+                {blog.hyperlink && (
+                    <div className="mt-8">
+                        <p>
+                            <span>Click here to know more: </span>
+                            <Link href={blog.hyperlink || "/"} className="text-blue-500 hover:underline break-words">
+                                {blog.hyperlink}
+                            </Link>
+                        </p>
+                    </div>
+                )}
+
                 {/* Conclusion */}
-                <p className="mt-8  mb-8 font-semibold">{blog.conclusion}</p>
+                <p className="mt-8 mb-8 font-semibold">{blog.conclusion}</p>
             </div>
 
             <div className="flex justify-end items-center space-x-2 md:space-x-4">
-      <Link href="/blogs" className="flex font-bold items-center text-red-500 cursor-pointer hover:underline">
- 
-          <span>Explore All Blogs</span>
-          <FaArrowRight className="ml-1 " />
+                <Link href="/blogs" className="flex font-bold items-center text-red-500 cursor-pointer hover:underline">
+                    <span>Explore All Blogs</span>
+                    <FaArrowRight className="ml-1" />
+                </Link>
+            </div>
 
-      </Link>
-    </div>
-
+            {/* Inline CSS to prevent text selection */}
+            <style jsx>{`
+                .no-select {
+                    user-select: none;
+                }
+            `}</style>
         </div>
     );
 }

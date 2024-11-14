@@ -5,52 +5,52 @@ function Counseling() {
   return (
 
     <>
-     
+
 
 
       <section className="m-auto mb-20 md:mt-0 mt-10 flex min-h-[80vh] max-w-7xl flex-col items-center md:flex-row px-4 md:px-0">
-  {/* Text Section */}
-  
-  <div className="md:w-1/2 md:pr-8">
-  {/* <Image src={"/sk-logo-slogan.png"} width={200} height={100} alt="counselling logo" className="mb-8 items-center justify-center" /> */}
-  <div className="flex md:justify-start justify-center mb-8">
-  <Image
-    src={"/sk-logo-slogan.png"}
-    width={250}
-    height={100}
-    alt="counselling logo"
-   
-  />
-</div>
+        {/* Text Section */}
 
-    <h1 className="text-3xl md:text-4xl font-libreBaskerVille text-[#212121] leading-snug text-center md:text-left mb-4">
-      Your Mental Health is more important than anything else
-    </h1>
-    <p className="leading-8 tracking-wider text-gray-500 text-lg font-bold text-center md:text-left">
-      Shrikant Kulange&apos;s Psychological Counselling Hub
-    </p>
-    <p className="leading-7 tracking-wide text-gray-500 text-lg text-center md:text-left">
-      Counselling . Education . Training
-    </p>
-    <p className="leading-7 tracking-wide text-gray-500 text-lg text-center md:text-left">
-      Cheers to mental health
-    </p>
-    <p className="leading-7 tracking-wide text-gray-500 text-lg text-center md:text-left">
-      One of the finest counselling services in town
-    </p>
-  </div>
+        <div className="md:w-1/2 md:pr-8">
+          {/* <Image src={"/sk-logo-slogan.png"} width={200} height={100} alt="counselling logo" className="mb-8 items-center justify-center" /> */}
+          <div className="flex md:justify-start justify-center mb-8">
+            <Image
+              src={"/sk-logo-slogan.png"}
+              width={250}
+              height={100}
+              alt="counselling logo"
 
-  {/* Image Section */}
-  <div className="p-5 md:w-1/2 w-full flex justify-center md:justify-end">
-    <Image
-      alt="Counselling"
-      src="/images/sk19.jpg"
-      width={600}
-      height={600}
-      className="rounded-lg object-cover w-full h-auto"
-    />
-  </div>
-</section>
+            />
+          </div>
+
+          <h1 className="text-3xl md:text-4xl font-libreBaskerVille text-[#212121] leading-snug text-center md:text-left mb-4">
+            Your Mental Health is more important than anything else
+          </h1>
+          <p className="leading-8 tracking-wider text-gray-500 text-lg font-bold text-center md:text-left">
+            Shrikant Kulange&apos;s Psychological Counselling Hub
+          </p>
+          <p className="leading-7 tracking-wide text-gray-500 text-lg text-center md:text-left">
+            Counselling . Education . Training
+          </p>
+          <p className="leading-7 tracking-wide text-gray-500 text-lg text-center md:text-left">
+            Cheers to mental health
+          </p>
+          <p className="leading-7 tracking-wide text-gray-500 text-lg text-center md:text-left">
+            One of the finest counselling services in town
+          </p>
+        </div>
+
+        {/* Image Section */}
+        <div className="p-5 md:w-1/2 w-full flex justify-center md:justify-end">
+          <Image
+            alt="Counselling"
+            src="/images/sk19.jpg"
+            width={600}
+            height={600}
+            className="rounded-lg object-cover w-full h-auto"
+          />
+        </div>
+      </section>
 
 
 
@@ -168,7 +168,7 @@ function Counseling() {
                 families to address a variety of mental health issues that may interfere with satisfying
                 interpersonal relationships in the home and the workplace.
               </p>
-             
+
             </div>
           </div>
         </div>
@@ -184,7 +184,7 @@ function Counseling() {
                 Counselors, psychotherapists, and psychologists are encouraged to have ongoing supervision as long
                 as they are practicing in the field of mental health.
               </p>
-              
+
             </div>
           </div>
         </div>
@@ -206,7 +206,7 @@ function Counseling() {
                 Through workshops, one-on-one guidance, and tailored programs.
 
               </p>
-              
+
             </div>
           </div>
         </div>
@@ -223,7 +223,7 @@ function Counseling() {
                 Online counselling, the digital-age version of counselling services is a more accessible, convenient and discrete method of receiving therapy. In order to attend online counselling sessions,
                 clients and the therapist need access to fast internet connections and webcams.
               </p>
-             
+
             </div>
           </div>
         </div>
@@ -241,7 +241,7 @@ function Counseling() {
                 families, school students, teachers, industrial workers and supervisors.
                 Separate counselling is also provided to all sectors in educational and industrial field.
               </p>
-              
+
             </div>
           </div>
         </div>
@@ -258,7 +258,7 @@ function Counseling() {
                 Come join us for one of our talks, workshops and be life long learners with us.
                 Our team have been affiliated with multi-national corporations in Singapore and in the region.
               </p>
-              
+
             </div>
           </div>
         </div>

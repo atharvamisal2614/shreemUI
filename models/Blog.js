@@ -10,6 +10,12 @@ const BlogSchema = new mongoose.Schema({
     bulletpoint1: { type: String },
     bulletpoint2: { type: String },
     bulletpoint3: { type: String },
+    bulletpoint4: { type: String },
+    bulletpoint5: { type: String },
+    bulletpoint6: { type: String },
+    bulletpoint7: { type: String },
+    bulletpoint8: { type: String },
+    bulletpoint9: { type: String },
     conclusion: { type: String }
 }, { timestamps: true })
 

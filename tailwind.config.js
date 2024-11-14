@@ -9,6 +9,7 @@ module.exports = {
     extend: {
       fontFamily:{
         libreBaskerVille: ['"LibreBaskerville-Regular"', 'serif'],
+        palanQuin:['"Palanquin-Regular"','serif']
       },
       colors: {
         background: "var(--background)",

@@ -31,14 +31,14 @@ function shreemclasses() {
             At Shreem Classes, we&apos;re committed to providing comprehensive academic support and holistic development for students of all ages. Our experienced faculty is dedicated to fostering a love of learning and empowering students to reach their full potential.
 
           </p>
-          
+
         </div>
 
         {/* Image Section */}
         <div className="p-5 md:w-1/2 w-full flex justify-center md:justify-end">
           <Image
             alt="Counselling"
-            src="/images/sk19.jpg"
+            src="/images/shreem-classroom-1.jpg"
             width={600}
             height={600}
             className="rounded-lg object-cover w-full h-auto"
@@ -53,30 +53,22 @@ function shreemclasses() {
 
           <div className="mt-10 flex flex-col justify-center md:flex-row">
             <div className="flex flex-col items-center p-2  md:w-1/3">
-
-
               <FaBrain size={70} className="text-red-500" />
-
               <h4 className="py-3 font-bold">Psychometric Assessments and Counseling</h4>
-
               <p className="text-center ">
                 We provide personalized guidance based on each student&apos;s unique learning style and needs.
               </p>
             </div>
             <div className="flex flex-col items-center p-2  md:w-1/3">
               <BiPhoneCall size={70} className="text-red-500" />
-
               <h4 className="py-3 font-bold">24/7 Life Coach and Psychologist Support</h4>
-
               <p className="text-center">
                 We offer round-the-clock support to address student&apos;s emotional and mental well-being.
               </p>
             </div>
             <div className="flex flex-col items-center p-2  md:w-1/3">
               <FaUserFriends size={70} className="text-red-500" />
-
               <h4 className="py-3 font-bold">Parent Counseling</h4>
-
               <p className="text-center">
                 We prioritize parental involvement and offer regular counseling sessions to support parents in their child&apos;s educational journey.
               </p>
@@ -99,7 +91,7 @@ function shreemclasses() {
         <div className="w-full">
           <div className="my-10 flex flex-col md:flex-row items-center justify-center max-w-6xl mx-auto bg-yellow-400 rounded-3xl">
             <div className="md:w-1/2">
-              <Image alt="Counselling" src="/images/sk23.jpg" width={600} height={400} className="rounded-3xl" />
+              <Image alt="Counselling" src="/images/shreem-classroom-1.jpg" width={600} height={400} className="rounded-3xl" />
             </div>
             <div className="p-5 md:w-1/2">
               <h3 className="md:text-4xl text-2xl leading-snug font-libreBaskerVille font-bold pb-4">Primary School (1st-5th)</h3>
@@ -118,7 +110,7 @@ function shreemclasses() {
         <div className="w-full">
           <div className="my-10 flex flex-col md:flex-row-reverse items-center justify-center max-w-6xl mx-auto bg-yellow-400 rounded-3xl">
             <div className="md:w-1/2">
-              <Image alt="Counselling Supervision" src="/images/sk26.jpg" width={600} height={400} className="rounded-3xl" />
+              <Image alt="Counselling Supervision" src="/shreem.webp" width={600} height={400} className="rounded-3xl" />
             </div>
             <div className="p-5 md:w-1/2">
               <h3 className="md:text-4xl text-2xl leading-snug font-libreBaskerVille font-bold pb-4">High School (6th-10th)</h3>
@@ -136,7 +128,7 @@ function shreemclasses() {
         <div className="w-full ">
           <div className="my-10 flex flex-col md:flex-row items-center justify-center max-w-6xl mx-auto bg-yellow-400 rounded-3xl">
             <div className="md:w-1/2">
-              <Image alt="School & Educational Institutions" src="/images/sk27.jpg" width={600} height={400} className="rounded-3xl" />
+              <Image alt="School & Educational Institutions" src="/images/shreem-classroom-2.jpg" width={600} height={400} className="rounded-3xl" />
             </div>
             <div className="p-5 md:w-1/2">
               <h3 className="md:text-4xl text-2xl  leading-snug font-libreBaskerVille font-bold pb-4">Grade 11-12th (Science)</h3>
@@ -146,28 +138,12 @@ function shreemclasses() {
                 <li className="mt-4">Comprehensive preparation for competitive exams like JEE and NEET
                 </li>
                 <li className="mt-4">Guidance on career counseling and college admissions
-
                 </li>
-
               </ul>
-
             </div>
           </div>
         </div>
-
-
-
-
-
-
-
-
-
-
       </section>
-
-
-
     </>
   );
 };
