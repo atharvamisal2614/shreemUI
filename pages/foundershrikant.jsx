@@ -132,7 +132,7 @@ export default function FounderShrikant() {
         <div className="flex justify-end items-center space-x-2 md:space-x-4">
           <Link href="/founderyashashri" className="flex font-bold items-center text-red-500 cursor-pointer hover:underline">
 
-            <span>Read more about Yashashree Patil</span>
+            <span>Read more about Dr. Yashashree Patil</span>
             <FaArrowRight className="ml-1 " />
 
           </Link>

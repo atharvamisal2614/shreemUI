@@ -106,7 +106,7 @@ export default function founderyashashri() {
         <div className="flex justify-end items-center space-x-2 md:space-x-4">
           <Link href="/foundershrikant" className="flex font-bold items-center text-red-500 cursor-pointer hover:underline">
 
-            <span>Read more about Shrikant Kulange</span>
+            <span>Read more about Dr. Shrikant Kulange</span>
             <FaArrowRight className="ml-1 " />
 
           </Link>

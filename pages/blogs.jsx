@@ -239,7 +239,7 @@ const Blogs = ({ blogs, totalPages, currentPage }) => {
     {filteredBlogs.length > 0 ? (
         <div className="grid gap-6 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 mt-10">
             {filteredBlogs.map((blog, index) => (
-                <div key={index} className="bg-gray-50 shadow-lg rounded-md overflow-hidden">
+                <div key={index} className="bg-gray-100 shadow-lg rounded-md overflow-hidden">
                     {/* Date */}
                     <div className="p-4">
                         <p className="text-md text-gray-600 font-semibold mb-2 font-libreBaskerVille">
