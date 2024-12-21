@@ -8,12 +8,10 @@ function shreemclasses() {
   return (
     <>
       <section className="m-auto mb-20 md:mt-0 mt-10 flex min-h-[80vh] max-w-7xl flex-col items-center md:flex-row px-4 md:px-0">
-
-
         <div className="md:w-1/2 md:pr-8">
           <div className="flex md:justify-start justify-center mb-8">
             <Image
-              src={"/shreem-logo-og.png"}
+              src={"/shreem-logo.png"}
               width={100}
               height={100}
               alt="counselling logo"
@@ -128,7 +126,7 @@ function shreemclasses() {
         <div className="w-full ">
           <div className="my-10 flex flex-col md:flex-row items-center justify-center max-w-6xl mx-auto bg-yellow-400 rounded-3xl">
             <div className="md:w-1/2">
-              <Image alt="School & Educational Institutions" src="/images/shreem-classroom-2.jpg" width={600} height={400} className="rounded-3xl" />
+              <Image alt="School & Educational Institutions" src="/images/shreem-1112th.jpg" width={600} height={400} className="rounded-3xl" />
             </div>
             <div className="p-5 md:w-1/2">
               <h3 className="md:text-4xl text-2xl  leading-snug font-libreBaskerVille font-bold pb-4">Grade 11-12th (Science)</h3>

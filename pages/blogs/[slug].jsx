@@ -1,7 +1,7 @@
 import mongoose from "mongoose";
 import Blog from "@/models/Blog";
 import { useEffect, useState } from "react";
-import { IoShareOutline } from "react-icons/io5";
+import { FaShareAlt } from "react-icons/fa";
 import Link from "next/link";
 import { FaArrowRight } from "react-icons/fa";
 
@@ -55,7 +55,7 @@ function BlogSlugs({ blog }) {
             <div className="flex justify-between items-center">
                 <h1 className="text-3xl font-bold text-gray-800 font-libreBaskerVille break-words">{blog.title}</h1>
                 <button onClick={handleShare} className="text-red-400">
-                    <IoShareOutline className="text-2xl mb-2" />
+                    <FaShareAlt className="text-xl mb-2" />
                 </button>
             </div>
 
