@@ -11,7 +11,7 @@ export default function Header() {
           <h2 className="absolute font-serif top-4 left-1/2 transform -translate-x-1/2 text-white text-lg md:text-2xl  font-bold">
             Counselling Office
           </h2>
-          <Link href="/counseling">
+          <Link href="https://www.skcounselling.in">
             <Image
               src="/counseling-1.jpg"
               alt="Portrait Image 1"

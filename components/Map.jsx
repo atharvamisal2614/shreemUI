@@ -53,7 +53,7 @@ function Map() {
               <p className="leading-relaxed text-base">
                 Our counselling services offer guidance and support for mental health, career development, and personal growth.
               </p>
-              <Link href={'/counseling'} className="mt-3 text-red-500 inline-flex items-center  font-semibold">
+              <Link href={'https://www.skcounselling.in'} className="mt-3 text-red-500 inline-flex items-center  font-semibold">
                 Learn More
                 <svg
                   fill="none"

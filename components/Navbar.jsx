@@ -60,15 +60,7 @@ function Navbar() {
             <Link href="/shreemclasses" className={getLinkClasses('/shreemclasses')}>
               Shreem Classes
             </Link>
-            {/* <Link href="/riayoga" className={getLinkClasses('/riayoga')}>
-              RIA Yoga Studio
-            </Link> */}
-            <Link href="/counseling" className={getLinkClasses('/counseling')}>
-              Learning Hub counseling
-            </Link>
-            <Link href="/blogs" className={getLinkClasses('/blogs')}>
-              Blogs
-            </Link>
+           
           </nav>
 
           {/* Quote Button */}

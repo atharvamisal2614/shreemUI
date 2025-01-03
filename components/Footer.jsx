@@ -24,7 +24,7 @@ const Footer = () => {
             <ul className="space-y-2">
               <li><Link href="/" className="hover:text-gray-500">Home</Link></li>
               <li><Link href="/shreemclasses" className="hover:text-gray-500">Shreem Classes</Link></li>
-              <li><Link href="/counseling" className="hover:text-gray-500">Learning Hub Counseling</Link></li>
+              <li><Link href="https://www.skcounselling.in" className="hover:text-gray-500">Learning Hub Counseling</Link></li>
               <li><Link href="https://wa.me/919890420209" className="hover:text-gray-500">Get in Touch</Link></li>
             </ul>
           </div>
@@ -34,7 +34,7 @@ const Footer = () => {
             <h2 className="font-bold text-lg text-gray-900 mb-4">Contact Us</h2>
             <p className="space-y-2">
               <Link href="tel:+919890420209" className="hover:text-gray-500 block">Phone: +91 98904 20209</Link>
-              <Link href="tel:+918080856676" className="hover:text-gray-500 block">Phone: +91 80808 56676</Link>
+              <Link href="tel:+919932285111" className="hover:text-gray-500 block">Phone: +91 99322 85111</Link>
             </p>
           </div>
 
@@ -67,7 +67,7 @@ const Footer = () => {
               Shreem Education Hub<br />
               45, Gulmohar Road, behind Om Bakers,<br />
               Kirloskar Colony, Savedi,<br />
-              Ahmednagar, Maharashtra 414001
+              Ahilyanagar, Maharashtra 414001
             </p>
           </div>
 
